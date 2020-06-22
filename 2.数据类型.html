@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        console.log('————————————————————Number——————————————————————');
+        var num = 10; // num 数字型 
+        var PI = 3.14 // PI 数字型
+            // 1. 八进制  0 ~ 7  我们程序里面数字前面加0 表示八进制
+        var num1 = 010;
+        console.log(num1); //  010  八进制 转换为 10进制 就是  8 
+        var num2 = 012;
+        console.log(num2);
+        // 2. 十六进制  0 ~ 9  a ~ f    #ffffff  数字的前面加 0x 表示十六进制
+        var num3 = 0x9;
+        console.log(num3);
+        var num4 = 0xa;
+        console.log(num4);
+        // 3. 数字型的最大值
+        console.log(Number.MAX_VALUE);
+        // 4. 数字型的最小值
+        console.log(Number.MIN_VALUE);
+        // 5. 无穷大
+        console.log(Number.MAX_VALUE * 2); // Infinity 无穷大  
+        // 6. 无穷小
+        console.log(-Number.MAX_VALUE * 2); // -Infinity 无穷大
+        // 7. 非数字
+        console.log('茶茶子' - 100); // NaN
+
+        // isNaN()：判断非数字，是数字返回 false，不是数字返回true
+        console.log(isNaN(12)); // false
+        console.log(isNaN('pink老师')); // true
+
+        console.log('————————————————————String——————————————————————');
+        // 1. 检测获取字符串的长度 length 
+        var str = 'my name is andy';
+        console.log(str.length); // 15
+        // 2. 字符串的拼接 +  
+        // 只要有字符串和其他类型相拼接 最终的结果是字符串类型
+        console.log('沙漠' + '骆驼'); // 字符串的 沙漠骆驼
+        console.log('TeaMeow' + 18); // 'TeaMeow18'
+        console.log('TeaMeow' + true); // TeaMeowtrue
+        console.log(12 + 12); // 24
+        console.log('12' + 12); // '1212'
+
+        var age = prompt('请输入您的年龄：');
+        var str = '您今年已经' + age + '岁了';
+        alert(str);
+
+        console.log('————————————————————Boolean——————————————————————');
+        var flag = true; // flag 布尔型 
+        var flag1 = false; // flag1 布尔型
+        console.log(flag + 1); // true 参与加法运算当1来看
+        console.log(flag1 + 1); // false 参与加法运算当 0来看
+
+        console.log('————————————————————Undefined——————————————————————');
+        // 如果一个变量声明未赋值 就是 undefined 未定义数据类型
+        var strr;
+        console.log(strr);
+        var variable = undefined;
+        console.log(variable + 'pink'); // undefinedpink
+        console.log(variable + 1); // NaN  undefined 和数字相加
+
+        console.log('————————————————————Null——————————————————————');
+        // null 空值
+        var space = null;
+        console.log(space + 'pink'); // nullpink
+        console.log(space + 1); // 1
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

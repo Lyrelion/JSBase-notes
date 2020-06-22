@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        console.log('双重for循环：外层循环循环一次， 里面的循环执行全部')
+
+        console.log('——————————打印n行n列的星星——————————')
+        var rows = prompt('请您输入行数:');
+        var cols = prompt('请您输入列数:');
+        var str1 = '';
+        for (var i = 1; i <= rows; i++) { // 外层循环负责打印n行
+            for (var j = 1; j <= cols; j++) { // 里层循环负责一行打印n个
+                str1 = str1 + '★';
+            }
+            str1 += '\n'; // 如果一行打印完毕5个星星就要另起一行 加 \n
+        }
+        console.log(str1);
+
+        console.log('——————————打印倒三角——————————')
+        var str2 = '';
+        for (var i = 1; i <= 10; i++) { // 外层循环控制行数
+            for (var j = i; j <= 10; j++) { // 里层循环打印的个数不一样  j = i
+                str2 = str2 + '★';
+            }
+            str2 += '\n';
+        }
+        console.log(str2);
+
+        console.log('——————————打印乘法口诀表——————————')
+        var str3 = '';
+        for (var i = 1; i <= 9; i++) { // 外层循环控制行数
+            for (var j = 1; j <= i; j++) { // 里层循环控制每一行的个数  j <= i
+                str3 += j + '×' + i + '=' + i * j + '\t'; // \t：tab转义符
+            }
+            str3 += '\n';
+        }
+        console.log(str3);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

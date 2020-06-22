@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function getTimer() {
+            var time = new Date();
+            // 格式化时间
+            var h = time.getHours();
+            h = h < 10 ? '0' + h : h;
+            var m = time.getMinutes();
+            m = m < 10 ? '0' + m : m;
+            var s = time.getSeconds();
+            s = s < 10 ? '0' + s : s;
+            // 格式化日期
+            var year = time.getFullYear();
+            var month = time.getMonth() + 1; // 月份 返回的月份小1个月   记得月份+1
+            var dates = time.getDate();
+            var day = time.getDay();
+            var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            return '现在是：' + year + '年' + month + '月' + dates + '日 ' + arr[day] + ' 北京时间：' + h + ':' + m + ':' + s
+        }
+        console.log(getTimer());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

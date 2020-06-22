@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        console.log('—————— replace("被替换的字符", "替换为的字符")  只替换第一个字符 ——————');
+        var str = 'andyandy';
+        console.log(str.replace('a', 'b'));
+
+        console.log('—————— 有一个字符串 “abcoefoxyozzopp“ 要求把里面所有的 o 替换为 * ——————');
+        var str1 = 'abcoefoxyozzopp';
+        while (str1.indexOf('o') !== -1) {
+            str1 = str1.replace('o', '*');
+        }
+        console.log(str1);
+
+        console.log('—————— split(“分隔符”)：字符转换为数组 ——————');
+        var str2 = 'red, pink, blue';
+        console.log(str2.split(','));
+        var str3 = 'red&pink&blue';
+        console.log(str3.split('&'));
+
+        console.log('—————— concat()：字符串连接 ————————')
+        var str4 = 'andy';
+        console.log(str4.concat('red'));
+
+        console.log('—————— substr()：字符串截取 ——————')
+        var str5 = '改革春风吹满地';
+        // 第一个2 是索引号的2 从第几个开始  第二个2 是取几个字符
+        console.log(str5.substr(2, 2));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

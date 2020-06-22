@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        console.log('————————————————筛选数组————————————————————')
+        var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var newArr = []; // 刚开始 newArr.length 就是 0
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] >= 10) {
+                // 新数组索引号应该从0开始 依次递增
+                newArr[newArr.length] = arr[i];
+            }
+        }
+        console.log(newArr);
+
+        console.log('————————————————冒泡排序————————————————————')
+
+        function sort(arr1) {
+            for (var i = 0; i <= arr1.length - 1; i++) {
+                // 里面的循环管每趟的交换次数
+                for (var j = 0; j <= arr1.length - i - 1; j++) {
+                    // 内部交换2个变量的值 前一个和后面一个数组元素相比较
+                    if (arr1[j] < arr1[j + 1]) {
+                        var temp = arr1[j];
+                        arr1[j] = arr1[j + 1];
+                        arr1[j + 1] = temp;
+                    }
+                }
+            }
+            return arr1;
+        }
+
+        var arr2333 = sort([1, 4, 2, 9]);
+        console.log(arr2333);
+        console.log('———————————求数组中的最大值———————————————')
+
+        function getArrMax(arr) {
+            var max = arr[0];
+            for (var i = 1; i <= arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        // 调用函数并接受其结果
+        var re = getArrMax([3, 77, 44, 99, 143]);
+        console.log(re);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

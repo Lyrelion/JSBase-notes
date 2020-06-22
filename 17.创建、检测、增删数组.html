@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        console.log('——————创建数组的两种方式——————');
+        console.log('——————利用字面量创建数组——————');
+        var arrA = [1, 2, 3];
+        console.log(arrA[0]);
+
+        console.log('——————利用new Array()创建数组——————');
+        // var arrB = new Array();  // 创建了一个空的数组
+        // var arrC = new Array(2);  // 这个2 表示 数组的长度为 2  里面有2个空的数组元素 
+        var arrD = new Array(2, 3); // 等价于 [2,3]  这样写表示 里面有2个数组元素 是 2和3
+        console.log(arrD);
+
+        console.log('——————检测是否是数组——————');
+        var arrE = [];
+        var obj = {};
+
+        console.log('——————instanceof 运算符——————');
+        console.log(arrE instanceof Array);
+        console.log(obj instanceof Array);
+
+        console.log('——————Array.isArray(参数);  H5新增的方法  ie9以上版本支持——————');
+        console.log(Array.isArray(arrE));
+        console.log(Array.isArray(obj));
+
+        console.log('——————————数组元素的添加和删除——————————');
+        var arrF = [1, 2, 3];
+        console.log('——————push()：数组末尾 添加一个或多个数组元素，返回的结果：新数组长度 ——————');
+        console.log(arrF.push(4, 'pink'));
+
+        console.log('——————unshift()：数组开头 添加一个或多个数组元素，返回的结果：新数组长度 ——————');
+        console.log(arrF.unshift('red', 'purple'));
+
+        console.log('——————pop()：数组结尾 删除一个元素，返回的结果：被删除的元素 ——————');
+        console.log(arrF.pop());
+
+        console.log('——————shift()：数组开头 删除一个元素，返回的结果：被删除的元素 ——————');
+        console.log(arrF.shift());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

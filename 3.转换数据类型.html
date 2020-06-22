@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        console.log('————————————————————转换为 String——————————————————————');
+        // 1. 把数字型转换为字符串型 变量.toString()
+        var num = 10;
+        var str = num.toString();
+        console.log(str);
+        // 检测数据类型
+        console.log(typeof str);
+        // 2. 我们利用 String(变量)   
+        console.log(String(num));
+        // 3. 利用 + 拼接字符串的方法实现转换效果 隐式转换
+        console.log(num + '');
+
+        console.log('————————————————————转换为 Number——————————————————————');
+        // var age = prompt('请输入您的年龄');
+        // 1. parseInt(变量)  可以把 字符型的转换为数字型 得到是整数
+        // console.log(parseInt(age)); // 输入框默认接受字符串，需要转换为数字
+        console.log(parseInt('3.14')); // 3 取整
+        console.log(parseInt('3.94')); // 3 取整
+        console.log(parseInt('120px')); // 120 会去到这个px单位
+        console.log(parseInt('rem120px')); // NaN
+        // 2. parseFloat(变量) 可以把 字符型的转换为数字型 得到是小数 浮点数
+        console.log(parseFloat('3.14')); // 3.14
+        console.log(parseFloat('120px')); // 120 会去掉这个px单位
+        console.log(parseFloat('rem120px')); // NaN
+        // 3. 利用 Number(变量) 
+        var str233 = '123';
+        console.log(Number(str233));
+        console.log(Number('12'));
+        // 4. 利用了算数运算 -  *  /  隐式转换
+        console.log('12' - 0); // 12
+        console.log('123' - '120');
+        console.log('123' * 1);
+        // 综合案例
+        var num1 = prompt('请您输入第一个值：');
+        var num2 = prompt('请您输入第二个值：');
+        var result = parseFloat(num1) + parseFloat(num2);
+        alert('您的结果是:' + result);
+
+        console.log('————————————————————转换为 Boolean——————————————————————');
+        // 否定的、空值的，最终都转换为 false
+        console.log(Boolean('')); // false
+        console.log(Boolean(0)); // false
+        console.log(Boolean(NaN)); // false
+        console.log(Boolean(null)); // false
+        console.log(Boolean(undefined)); // false
+        console.log('------------------------------');
+        console.log(Boolean('123'));
+        console.log(Boolean('你好吗'));
+        console.log(Boolean(2333));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
